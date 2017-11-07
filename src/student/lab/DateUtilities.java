@@ -13,7 +13,12 @@ import javax.swing.text.DateFormatter;
  * This is a utility class containing different methods that utilize the newer
  * <b>Java 8<b> Date and Time API. These methods can be used as tools to do
  * various calculations with times and dates.
- * 
+ * <br></br>
+ * Revision History:
+ * <ul>
+ *  <li>2017-11-02: Created DateUtilities class</li>
+ *  <li>2017-11-07: Added JavaDoc comments</li>
+ * </ul>
  * @author Isaac Stefanski, istefanski@my.wctc.edu
  * @version 1.00
  * @since 1.8
