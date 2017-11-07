@@ -115,24 +115,24 @@ public class DateUtilities {
     /**
      * Calculate a <code>Duration</code> between a start date and end date.
      * 
-     * @param startDate - a <code>LocalDate</code> object
-     * @param endDate - a <code>LocalDate</code> object
+     * @param startDateTime - a <code>LocalDate</code> object
+     * @param endDateTime - a <code>LocalDate</code> object
      * @return duration between start and end dates
      * @throws IllegalArgumentException if any date is null
      */
-    public final Duration findDuration(LocalDate startDate, LocalDate endDate) throws IllegalArgumentException{
-        if(startDate == null || endDate == null){
+    public final Duration findDuration(LocalDateTime startDateTime, LocalDateTime endDateTime) throws IllegalArgumentException{
+        if(startDateTime == null || endDateTime == null){
             throw new IllegalArgumentException("Start and end dates cannot be null");
         }
-        Duration diff = Duration.between(startDate, endDate);
+        Duration diff = Duration.between(startDateTime, endDateTime);
         return diff;
     }
     
     /**
      * Calculate the number of hours between two times.
      * 
-     * @param startDate - a <code>LocalDateTime</code> object
-     * @param endDate - a <code>LocalDateTime</code> object
+     * @param startDateTime - a <code>LocalDateTime</code> object
+     * @param endDateTime - a <code>LocalDateTime</code> object
      * @return a <code>long</code> with the value of the calculated duration in
      * hours between start and end times
      * @throws IllegalArgumentException if any <code>LocalDateTime</code>
@@ -150,16 +150,16 @@ public class DateUtilities {
     /**
      * Calculate the number of days between two dates specified by the user.
      * 
-     * @param startDate - a <code>LocalDate</code> object
-     * @param endDate - a <code>LocalDate</code> object
+     * @param startDateTime - a <code>LocalDate</code> object
+     * @param endDateTime - a <code>LocalDate</code> object
      * @return duration in days between start and end dates
      * @throws IllegalArgumentException if any date is null
      */
-    public final long findDaysBetween(LocalDate startDate, LocalDate endDate) throws IllegalArgumentException{
-        if(startDate == null || endDate == null){
+    public final long findDaysBetween(LocalDateTime startDateTime, LocalDateTime endDateTime) throws IllegalArgumentException{
+        if(startDateTime == null || endDateTime == null){
             throw new IllegalArgumentException("Start and end dates cannot be null");
         }
-        Duration diff = Duration.between(startDate, endDate);
+        Duration diff = Duration.between(startDateTime, endDateTime);
         long days = diff.toDays();
         return days;
     }
